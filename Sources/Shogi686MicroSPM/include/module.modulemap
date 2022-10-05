@@ -1,0 +1,5 @@
+module Shogi686MicroSPM {
+    umbrella header "shim.h"
+    export *
+    link "shogi686micro"
+}

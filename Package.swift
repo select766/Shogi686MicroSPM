@@ -18,11 +18,14 @@ let package = Package(
     targets: [
         // Targets are the basic building blocks of a package. A target can define a module or a test suite.
         // Targets can depend on other targets in this package, and on products in packages this package depends on.
+        .binaryTarget(
+            name: "libshogi686micro",
+            path: "Frameworks/libshogi686micro.xcframework"),
         .target(
             name: "Shogi686MicroSPM",
-            dependencies: []),
-        .testTarget(
-            name: "Shogi686MicroSPMTests",
-            dependencies: ["Shogi686MicroSPM"]),
+            dependencies: ["libshogi686micro"]),
+//        .testTarget(
+//            name: "Shogi686MicroSPMTests",
+//            dependencies: ["Shogi686MicroSPM"]),
     ]
 )
