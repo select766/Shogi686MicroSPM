@@ -6,7 +6,7 @@
 extern "C" {
 #endif
 
-typedef void usi_read_cb(char* buf);
+typedef int usi_read_cb(char* buf);
 typedef void usi_write_cb(const char* buf);
 int micro_main(usi_read_cb usi_read, usi_write_cb usi_write);
 
